@@ -18,6 +18,7 @@ var webpackConfig = {
   output: {
     path: __dirname + '/dist',
     publicPath: '/dist',
+    libraryTarget: 'commonjs2',
     filename: 'jslou.js'
   },
   module: {
