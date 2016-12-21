@@ -33,7 +33,7 @@ var webpackConfig = {
       },
       {
         test: /\.scss$/,
-        loader: process.env.NODE_ENV === 'production' ?
+        loaders: process.env.NODE_ENV === 'production' ?
           [ExtractTextPlugin.extract('style', sassLoaders)] :
           devSassLoaders
       },
@@ -46,7 +46,7 @@ var webpackConfig = {
   },
   postcss: function () {
     return [autoprefixer({ browsers: ["> 2%"] })];
-  }
+  },
   plugins: [
     new webpack.NoErrorsPlugin(),
     new ExtractTextPlugin('jslou.css', {
