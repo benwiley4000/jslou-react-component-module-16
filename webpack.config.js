@@ -3,10 +3,7 @@ var autoprefixer = require('autoprefixer');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var cssLoaders = [
-  {
-    loader: 'css',
-    query: { modules: true, localIdentName: '[name]-[local]--[hash:base64:5]' }
-  },
+  'css?modules&localIdentName=[name]__[local]___[hash:base64:5]',
   'postcss'
 ];
 var sassLoaders = cssLoaders.concat('sass');
@@ -27,15 +24,15 @@ var webpackConfig = {
     loaders: [
       {
         test: /\.css$/,
-        loaders: process.env.NODE_ENV === 'production' ?
-          [ExtractTextPlugin.extract('style', cssLoaders)] :
-          devCssLoaders
+        loader: process.env.NODE_ENV === 'production' ?
+          ExtractTextPlugin.extract('style', cssLoaders.join('!')) :
+          devCssLoaders.join('!')
       },
       {
         test: /\.scss$/,
-        loaders: process.env.NODE_ENV === 'production' ?
-          [ExtractTextPlugin.extract('style', sassLoaders)] :
-          devSassLoaders
+        loader: process.env.NODE_ENV === 'production' ?
+          ExtractTextPlugin.extract('style', sassLoaders.join('!')) :
+          devSassLoaders.join('!')
       },
       {
         test: /\.jsx?$/,
