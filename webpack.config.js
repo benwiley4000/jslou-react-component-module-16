@@ -41,6 +41,7 @@ var webpackConfig = {
       }
     ]
   },
+  externals: ['react', 'classnames'],
   postcss: function () {
     return [autoprefixer({ browsers: ["> 2%"] })];
   },
