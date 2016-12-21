@@ -41,7 +41,20 @@ var webpackConfig = {
       }
     ]
   },
-  externals: ['react', 'classnames'],
+  externals: {
+    'react': {
+      root: 'React',
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react'
+    },
+    'classnames': {
+      root: 'classNames',
+      commonjs: 'classnames',
+      commonjs2: 'classnames',
+      amd: 'classnames'
+    }
+  },
   postcss: function () {
     return [autoprefixer({ browsers: ["> 2%"] })];
   },
