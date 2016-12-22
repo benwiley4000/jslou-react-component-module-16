@@ -1,30 +1,32 @@
-.header {
-  text-align: center;
-}
-
-.imagewrapper {
-  width: 200px;
-  margin: 0 auto;
-  pointer-events: none;
-  background-color: #333;
-  padding: 10px;
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
+.jslou {
+  .header {
+    text-align: center;
   }
-}
 
-.link {
-  display: block;
-  text-align: center;
-}
+  .imagewrapper {
+    width: 200px;
+    margin: 0 auto;
+    pointer-events: none;
+    background-color: #333;
+    padding: 10px;
 
-.rotating {
-  transform: rotate(360deg);
-  transition: transform 2s;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
 
-  &.reverse {
-    transform: rotate(0deg);
+  .link {
+    display: block;
+    text-align: center;
+  }
+
+  .rotating {
+    transform: rotate(360deg);
+    transition: transform 2s;
+
+    &.reverse {
+      transform: rotate(0deg);
+    }
   }
 }

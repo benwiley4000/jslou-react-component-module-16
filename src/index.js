@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './styles.scss';
+import './styles.scss';
 
 class JSLou extends React.Component {
   constructor (props) {
@@ -28,17 +28,17 @@ class JSLou extends React.Component {
   render () {
     const { rotating, reverse } = this.state;
     return (
-      <div>
-        <h1 className={styles.header}>Come to JSLou!</h1>
+      <div className="jslou">
+        <h1 className="header">Come to JSLou!</h1>
         <div className={classNames(
-          styles.imagewrapper,
-          { [styles.rotating]: rotating, [styles.reverse]: reverse }
+          "imagewrapper",
+          { "rotating": rotating, "reverse": reverse }
         )}>
           <img src="http://jslou.org/img/logo-2015.png" />
         </div>
         {!rotating && (
           <a
-            className={styles.link}
+            className="link"
             href=""
             onClick={e => this.toggleRotating(e)}
           >
@@ -47,14 +47,14 @@ class JSLou extends React.Component {
         )}
         {rotating && (
           <a
-            className={styles.link}
+            className="link"
             href=""
             onClick={e => this.toggleReverse(e)}
           >
             Reverse!
           </a>
         )}
-        <a className={styles.link} href="http://jslou.org">Learn more here.</a>
+        <a className="link" href="http://jslou.org">Learn more here.</a>
       </div>
     );
   }
