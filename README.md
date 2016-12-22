@@ -1,5 +1,7 @@
 #jslou-react-component-module-16
 
+See [prepped module](https://github.com/benwiley4000/jslou-react-component-module-16/tree/prepped) and [live-coded, deployed module](https://github.com/benwiley4000/jslou-react-component-module-16/tree/live).
+
 A React component module built for a lightning talk at JSLou http://jslou.org/
 
 ##Tips for preparing a React component for npm:
