@@ -1,5 +1,7 @@
 #jslou-react-component-module-16
 
+[![NPM](https://nodei.co/npm/jslou-react-component-module-16.png)](https://npmjs.org/package/jslou-react-module-component-16)
+
 A React component module built for a lightning talk at JSLou http://jslou.org/
 
 ##Tips for preparing a React component for npm:
