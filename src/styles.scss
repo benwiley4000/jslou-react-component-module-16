@@ -22,6 +22,7 @@
 
 .rotating {
   transform: rotate(360deg);
+  transition: transform 2s;
 
   &.reverse {
     transform: rotate(0deg);
