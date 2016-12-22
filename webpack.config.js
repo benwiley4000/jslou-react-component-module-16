@@ -18,8 +18,13 @@ var webpackConfig = {
   output: {
     path: __dirname + '/dist',
     publicPath: '/dist',
-    libraryTarget: 'commonjs2',
+    libraryTarget: 'umd',
+    library: 'JSLou',
     filename: 'jslou.js'
+  },
+  devServer: {
+    inline: true,
+    staticOptions: { index: 'example.html' }
   },
   module: {
     loaders: [
@@ -48,12 +53,6 @@ var webpackConfig = {
       commonjs: 'react',
       commonjs2: 'react',
       amd: 'react'
-    },
-    'classnames': {
-      root: 'classNames',
-      commonjs: 'classnames',
-      commonjs2: 'classnames',
-      amd: 'classnames'
     }
   },
   postcss: function () {

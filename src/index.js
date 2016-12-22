@@ -60,4 +60,4 @@ class JSLou extends React.Component {
   }
 }
 
-export default JSLou;
+module.exports = JSLou;
